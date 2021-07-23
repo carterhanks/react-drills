@@ -1,28 +1,11 @@
 import React, {Component} from 'react';
 import './App.css';
+import ShowText from './ShowText'
 
-class App extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      message: ""
-    }
-  };
-  
-  handleChange(value) {
-    this.setState({message: value});
-  };
-  
+export default class App extends Component {
   render() {
     return (
-      <div className="App">
-        <input type="text" onChange={e => this.handleChange(e.target.value)}></input>
-        <p>{this.state.message}</p>
-      </div>
-    );
-  };
-};
-
-
-export default App;
+      <ShowText/>
+    )
+  }
+}
